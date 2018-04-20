@@ -1,3 +1,20 @@
-<p>
-  joke-form works!
-</p>
+<div class="card bg-light mb-3" style="width: 640px;">
+  <div class="card-body">
+    <div class ="card-title">
+      <h2>Create a Joke</h2>
+    </div>
+  <div class="form-group">
+    <label for="inputSetup">Setup</label>
+    <input type="text" class="form-control" id="inputSetup" placeholder="Enter joke" #setup>
+  </div>
+  <div class="form-group">
+    <label for="inputPunchLine">Punchline</label>
+    <input type="text" class="form-control" id="inputPunchLine" placeholder="Enter punchline" #punchline>
+  </div>
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input" id="inputSetup">
+    <label class="form-check-label" for="inputSetup">Check me out</label>
+  </div>
+  <button (click)="createJoke(setup.value, punchline.value)" type="submit" class="btn btn-primary">Submit</button>
+</div>
+</div>

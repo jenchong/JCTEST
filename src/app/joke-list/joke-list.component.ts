@@ -17,6 +17,10 @@ export class JokeListComponent implements OnInit {
       new Joke ('A kid threw a lump of xxxcheddar at me','I thought \'That\'s not very mature but is really hilarious .\''),
     ];
   }
+  
+  addJoke(joke) {
+  this.jokes.unshift(joke);
+  }
 
   ngOnInit() {
   }

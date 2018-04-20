@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Joke } from '../joke/joke.component'; 
 
 @Component({
   selector: 'app-joke-form',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./joke-form.component.css']
 })
 export class JokeFormComponent implements OnInit {
-
+  @Output() jokeCreated = new EventEmitter();
   constructor() { }
 
   ngOnInit() {
   }
 
+  createJoke(setupa: string, punchlinea: string) {
+
+    this.jokeCreated.emit(new Joke(setupa, punchlinea)); 
+  }
 }
